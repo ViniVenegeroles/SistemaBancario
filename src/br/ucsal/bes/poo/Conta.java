@@ -17,11 +17,6 @@ public abstract class Conta implements Operavel {
         this.senha = senha;
     }
 
-    public void transferir(double valor, Conta destino) {
-        this.sacar(valor);
-        destino.depositar(valor);
-    }
-
     public boolean verificarSenha(String senhaInformada) {
         return this.senha.equals(senhaInformada);
     }
@@ -52,10 +47,6 @@ public abstract class Conta implements Operavel {
         System.out.println("\nNúmero da conta: " + numConta);
         System.out.println("Saldo: R$ " + saldo);
 
-    }
-
-    public double consultarSaldo() {
-        return saldo;
     }
 
     public void setSaldo(double saldo) {
