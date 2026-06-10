@@ -8,9 +8,6 @@ public abstract class Conta implements Operavel {
 
 
     public Conta(int numConta, Cliente titular, String senha) {
-        if (senha == null || senha.length() < 4) {
-            throw new IllegalArgumentException("Senha deve ter no mínimo 4 caracteres.");
-        }
         this.numConta = numConta;
         this.saldo = 0;
         this.titular = titular;

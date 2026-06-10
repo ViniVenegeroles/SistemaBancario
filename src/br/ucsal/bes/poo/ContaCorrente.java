@@ -33,17 +33,13 @@ public class ContaCorrente extends Conta implements Operavel {
         double novoSaldo = getSaldo() - TARIFA;
         setSaldo(novoSaldo);
         System.out.println("[Conta Corrente] Tarifa de manutenção de R$ " + TARIFA + " descontada." +
-                "\nNovo saldo: " + novoSaldo);
-    }
-
-    public double getSaldoDisponivel() {
-        return getSaldo() + limite;
+                "\nNovo saldo: R$ " + novoSaldo +"\nLimite: R$ "+ this.limite);
     }
 
     public void exibirDados() {
         super.exibirDados();
         System.out.println("Limite: R$ " + limite);
-        System.out.println("Saldo disponível: R$ " + getSaldoDisponivel());
+        System.out.println("Saldo disponível: R$ " + consultarSaldo());
     }
 
     public double getLimite() {

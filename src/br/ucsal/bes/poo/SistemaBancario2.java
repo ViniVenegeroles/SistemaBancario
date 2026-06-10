@@ -73,6 +73,9 @@ public class SistemaBancario2 {
             String endereco = sc.nextLine();
             System.out.print("Senha (minimo 4 caracteres): ");
             String senha = sc.nextLine();
+            if (senha == null || senha.length() < 4) {
+              throw new IllegalArgumentException("Senha deve ter no mínimo 4 caracteres.");
+            }
 
             System.out.println("Tipo: 1 - Corrente  2 - Poupanca");
             System.out.print("Opcao: ");
@@ -195,8 +198,8 @@ public class SistemaBancario2 {
                 sc.nextLine();
                 return valor;
             } catch (InputMismatchException e) {
-                System.out.print("Digite apenas numeros: ");
-                sc.nextLine(); // limpa o buffer
+                System.out.print("Digite apenas numeros inteiros - Exemplo: 7 ");
+                sc.nextLine();
             }
         }
     }
@@ -208,9 +211,10 @@ public class SistemaBancario2 {
                 sc.nextLine();
                 return valor;
             } catch (InputMismatchException e) {
-                System.out.print("Digite um valor numerico valido: ");
+                System.out.print("Digite um valor numerico valido - Exemplo: 0,00");
                 sc.nextLine();
             }
         }
     }
+   
 }

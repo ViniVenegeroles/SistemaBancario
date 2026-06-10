@@ -19,7 +19,7 @@ public class ContaPoupanca extends Conta implements Operavel {
     }
 
     public void atualizarSaldo() {
-        double rendimento = getSaldo() * (taxaRendimento / 100);
+        double rendimento = consultarSaldo() * (taxaRendimento / 100);
         setSaldo(getSaldo() + rendimento);
         System.out.println("[Conta Poupança] Rendimento de R$ " + rendimento + " aplicado" +
                 "\nNovo saldo: R$ " + getSaldo());
