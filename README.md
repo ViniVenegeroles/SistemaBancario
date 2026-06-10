@@ -113,4 +113,4 @@ src/
 | Nome     | GitHub |
 |----------|---|
 | Vinicius | [@ViniVenegeroles](https://github.com/ViniVenegeroles) |
-| Allan    | [@usuariodele](https://github.com/usuariodele) |
+| Allan    | [@allan-maia1](https://github.com/allan-maia1) |
